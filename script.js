@@ -21,6 +21,8 @@ const adviceObjs = {
   17: `Sometimes it takes losing what you're settling for, to remind you of what you truly deserve`,
   18: `Sometimes it takes the most uncomfortable paths to lead your life to the most beautiful palce`,
   19: `Your current situation is not your final destination`,
+  20: `Choose growth over company`,
+  21: `You have to understand that there's a process to everthing and you've got to trust it`,
 };
 
 let RandQuoteNumber = Math.floor(
@@ -34,16 +36,16 @@ const btnClick = function () {
     Math.random() * Object.keys(adviceObjs).length + 1
   );
   //   let quoteNumer = "Advice #" + RandQuoteNumber;
-  let quoteNumer = `Advice #${RandQuoteNumber}`;
-  document.querySelector(".adviceNumber").textContent = quoteNumer;
+  let quoteNumer = RandQuoteNumber;
+  document.querySelector("#advNum").textContent = quoteNumer;
   // console.log(adviceObjs[`${RandQuoteNumber}`]);
   let quote = adviceObjs[`${RandQuoteNumber}`];
-  document.querySelector(".quote").textContent = quote;
+  document.querySelector("#advText").textContent = quote;
   //console.log(x);
 };
 //this.onload = btnClick;
 //console.log(adviceObjs);
 //console.log(Object.keys(adviceObjs).length); //gets length of objects
 
-document.querySelector("#myBtn").addEventListener("click", btnClick);
-document.querySelector(".quote").addEventListener("load", btnClick);
+document.querySelector(".main__cardCircle").addEventListener("click", btnClick);
+document.querySelector("#advText").addEventListener("load", btnClick);
